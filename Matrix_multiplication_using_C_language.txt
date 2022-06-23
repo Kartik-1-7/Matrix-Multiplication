@@ -1,18 +1,15 @@
 /******************************************************************************
-
                            Matrix multiplication using C language
-                           
-        In this code we will perform Matrix Multiplication and prnting of matrix using a function
-
+  In this code we will perform Matrix Multiplication and prnting of matrix using a function
 *******************************************************************************/
 
 #include <stdio.h>
 #include <conio.h>
 
-int pass_row, pass_col;                     /* Defined global variable to pass the size of the matrix for printing */
+int pass_row, pass_col;                    				 /* Defined global variable to pass the size of the matrix for printing */
 
 
-void FUN_MAT_print(int MAT_P[pass_row][pass_col])   /* Function for printing the matrix */
+void FUN_MAT_print(int MAT_P[pass_row][pass_col])  		 /* Function for printing the matrix */
 {
      
     for (int i = 0; i < pass_row; i++)
@@ -27,12 +24,12 @@ void FUN_MAT_print(int MAT_P[pass_row][pass_col])   /* Function for printing the
     
 }
 
-void main ()                    /* Main funtion */
+void main ()                  									  	/* Main funtion */
 {
-  int MAT_A[3][3] = { {5, 2, 3}, {1, 5, 4}, {2, 1, 9} };        /* Iniatlizing Matrix A */
-  int MAT_B[3][2] = { {2, 1}, {1, 5}, {6, 2} };                 /* Iniatlizing Matrix B */
+  int MAT_A[3][3] = { {5, 2, 3}, {1, 5, 4}, {2, 1, 9} };       	 	/* Iniatlizing Matrix A */
+  int MAT_B[3][2] = { {2, 1}, {1, 5}, {6, 2} };             	 	/* Iniatlizing Matrix B */
   
-  int n_col_A = sizeof (MAT_A[0]) / 4;                   /* Divide by 4 because int takes 4 bytes of memory */
+  int n_col_A = sizeof (MAT_A[0]) / 4;                   			/* Divide by 4 because int takes 4 bytes of memory */
   int n_row_A = (sizeof (MAT_A) / n_col_A) / 4;
   
   int n_col_B = sizeof (MAT_B[0]) / 4;
@@ -59,7 +56,7 @@ void main ()                    /* Main funtion */
 	            MAT_C[i][j] = 0;
 	            for (int k = 0; k < n_row_B; k++)
 		            {
-		                MAT_C[i][j] = MAT_C[i][j] + MAT_A[i][k] * MAT_B[k][j];
+		                MAT_C[i][j] = MAT_C[i][j] + MAT_A[i][k] * MAT_B[k][j];       /* Matrix Operation step */
 		            }
 	        }
 	    }
